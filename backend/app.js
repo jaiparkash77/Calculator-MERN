@@ -10,7 +10,9 @@ app.use(cookieParser());
 
 //Import route
 const user = require('./routes/userRoute');
+const calculate = require('./routes/calculatorRoute');
 
 app.use("/api/v1", user);
+app.use("/api/v1", calculate);
 
 module.exports = app;

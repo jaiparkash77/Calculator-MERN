@@ -6,7 +6,6 @@ exports.registerUser = async (req, res) => {
     const { name, email, password } = req.body;
     const user = await User.create({ name, email, password });
     const token = user.getJWTToken();
-    console.log(token)
 
     //options for cookie
     const options = {

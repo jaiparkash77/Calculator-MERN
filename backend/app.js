@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const cookieParser = require("cookie-parser");
+const cors = require('cors');
 
 const app = express();
 
@@ -11,8 +12,9 @@ app.use(cookieParser());
 //Import route
 const user = require('./routes/userRoute');
 const calculate = require('./routes/calculatorRoute');
-
+app.use(cors());
 app.use("/api/v1", user);
 app.use("/api/v1", calculate);
+
 
 module.exports = app;

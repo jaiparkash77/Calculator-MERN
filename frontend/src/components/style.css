@@ -1,0 +1,38 @@
+*{
+    background-color: rgba(245, 174, 43, 0.86);
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.calculator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    background-color: orange;
+    padding: 10px;
+    margin: 2px;
+    width: 50px;
+}
+.display{
+    color: white;
+    height: 50px;
+    font-size: 30px;
+}
+.zero{
+    width: 105px;
+}
+
+.textBox{
+    width: 180px;
+    height: 30px;
+    background-color: white;
+}
+.save{
+    background-color: rgb(73, 73, 244);
+    border: none;
+    border-radius: 10%;
+}

@@ -3,9 +3,11 @@ const Calculator = require("../model/calculatorModel");
 //Calculate new
 exports.newCalculate = async (req, res) => {
   try {
-    const { calculation, result } = req.body;
+    const { name, calculation, result } = req.body;
+    console.log(name,calculation,result)
     const calculate = await Calculator.create({
-      user: req.user._id,
+      // user: req.user._id,
+      name,
       calculation,
       result,
     });
@@ -14,7 +16,7 @@ exports.newCalculate = async (req, res) => {
       data: calculate,
     });
   } catch (error) {
-    res.status(400).json({
+    res.status(401).json({
       success: false,
       message: error.message,
     });
@@ -59,7 +61,6 @@ exports.deleteCalculate = async (req, res, next) => {
           .json({ message: "Calculate not found with this Id" });
       }
   
-    // await calculate.deleteOne({"_id": ObjectId(req.params.id)});
     await calculate.deleteOne({_id: req.params.id});
   
     res.status(200).json({

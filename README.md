@@ -1,4 +1,4 @@
-# MERN E-COMMERCE
+# Calculator App
 
 Hi! My name is **Jai Parkash**, I have created Calculator project as mentioned in the assignment of the company.
 
